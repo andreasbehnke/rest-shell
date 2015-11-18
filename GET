@@ -1,0 +1,2 @@
+#!/bin/bash
+curl -v -k -H "Content-Type:application/json" -X GET -b cookies.txt -c cookies.txt $1
