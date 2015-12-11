@@ -1,2 +1,6 @@
 #!/bin/bash
-curl -v -k -H "Content-Type:application/json" -X GET -b cookies.txt -c cookies.txt $1
+DIR="${BASH_SOURCE%/*}"
+if [[ ! -d "$DIR" ]]; then DIR="$PWD"; fi
+method='GET'
+url=$1
+. "$DIR/base.sh"
